@@ -620,7 +620,7 @@ class Adyen_Payment_Model_ProcessNotification extends Mage_Core_Model_Abstract {
                     }
                 }
 
-                if($message) {
+                if(isset($message)) {
                     $comment = $order->addStatusHistoryComment($message);
                     $order->addRelatedObject($comment);
                 }
